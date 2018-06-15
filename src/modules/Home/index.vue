@@ -47,7 +47,10 @@ export default {
   data() {
     return{
       searchQuery: '',
-    gridColumns: ['name', 'power','stamina'],
+    gridColumns: [{fieldName:'Select',suppressFilter:true,checkBox:true,width:'20px'},
+    {fieldName:'name',suppressFilter:false}, 
+    {fieldName:'power',suppressFilter:false},
+    {fieldName:'stamina',suppressFilter:false}],
     gridData: [
       { name: 'Chuck Norris', power: Infinity , stamina: 8000},
       { name: 'Bruce Lee', power: 9000 , stamina: 9000 },
